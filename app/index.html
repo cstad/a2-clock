@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>A2 Clock</title>
+
+    <!-- jquery -->
+    <script src="lib/jquery.min.js"></script>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css">
+
+    <!-- App css -->
+    <link rel="stylesheet" type="text/css" href="css/Clock.css">
+</head>
+<body>
+    <a2-clock></a2-clock>
+
+<!-- ES6-related imports -->
+<script src="lib/traceur-runtime.js"></script>
+<script src="lib/es6-module-loader-sans-promises.src.js"></script>
+<script src="lib/extension-register.js"></script>
+<script src="lib/extension-cjs.js"></script>
+<script>
+    System.paths = {
+        'rx/dist/rx.all': 'lib/rx.all.js',
+        'angular2/*': 'lib/angular2.js',
+        '*': '*.js'
+    };
+    register(System);
+    cjs(System);
+</script>
+
+<!-- Angular2-related imports -->
+<script src="lib/zone.js"></script>
+<script src="lib/long-stack-trace-zone.js"></script>
+<script src="lib/angular2.js"></script>
+
+<!-- Import component -->
+<script>
+console.log('Clock index');
+    System.import('Clock').then(function(clock) {
+        clock.main();
+    }, console.log.bind(console));
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<div class="a2Clock">
+    <h1 *if="time">
+        {{time.getMonth() + '/' + time.getDate() + '/' + time.getFullYear()}}
+    </h1>
+    <svg class="clock">
+        <!-- Center point -->
+        <circle cx="50%" cy="50%" r="5"></circle>
+        <!-- Second hand -->
+        <path class="secondHand" d="{{getSecondHandPosition()}}" />
+    </svg>
+</div>
