@@ -1,1 +1,1 @@
-# a2-clock
+# Angular2 Clock Component
