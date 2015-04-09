@@ -1,17 +1,32 @@
 @hand-color: #000;
 
-.a2Clock {
-    svg.clock {
-        height: 300px;
-        width: 300px;
-        border: 1px solid black;
-        border-radius: 10px;
-        circle {
-            fill: @hand-color;
+svg.a2Clock {
+    height: 300px;
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 10px;
+    circle.face {
+        stroke-width: 2px;
+        stroke: #fff; 
+    }
+    .hand {
+        stroke-width: 1px;
+        fill: #333;
+        stroke: #555;
+        /*stroke: @hand-color;
+        stroke-linejoin: round;*/
+        &.second {
+            stroke-width: 2px;
+            stroke: #f55;
         }
-        .secondHand {
-            stroke: @hand-color;
-
+        &.minute, &.hour {
+            stroke-width: 3px;
         }
+        &.hour {
+            stroke: red;
+        }
+    }
+    .hourLabel {
+        font-size: 40px;
     }
 }
