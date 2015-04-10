@@ -26,22 +26,18 @@ svg.a2Clock {
     &[clocktype=default] {
         border: 1px solid black;
         border-radius: 10px;
-        .face {
-            // fill: red;
-        }
+        background: #555;
+        .face { }
         .numbers {
             stroke: #fff;
         }
         .hands {
             .hand {
-                fill: #333;
                 stroke: #555;
                 &.second {
-                    stroke: #f55;
+                    stroke: #ccc;
                 }
-                &.minute, &.hour {
-                    // stroke-width: 3px;
-                }
+                &.minute, &.hour { }
                 &.hour {
                     stroke: red;
                 }

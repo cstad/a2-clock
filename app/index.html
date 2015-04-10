@@ -10,14 +10,14 @@
     <!-- bootstrap -->
     <link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css">
   </head>
-  <body class="container">
+  <body class="container" style="padding-top: 50px;">
     <div class="row">
 <!-- TODO: HOW TO INSTANTIATE MULTIPLE COMPONENTS? -->
       <div class="col-md-12 text-center">
         <a2-clock type="default">Loading Clock...</a2-clock>
       </div>
       <div class="col-md-12 text-center">
-        <a2-clock type="dark">Loading Clock...</a2-clock>
+        <!-- <a2-clock type="dark">Loading Clock...</a2-clock> -->
       </div>
     </div>
 
@@ -45,7 +45,7 @@
   <script>
   console.log('Clock index');
     // GET files and initialize each
-    Promise.all([System.import('Clock'), System.import('Clock')]).then(function(clocks) {
+    Promise.all([System.import('Clock')/*, System.import('Clock')*/]).then(function(clocks) {
       clocks.forEach(function (clock) {
         clock.main();
       });
