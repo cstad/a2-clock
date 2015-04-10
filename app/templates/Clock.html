@@ -1,8 +1,8 @@
 <style>@import "../css/Clock.css";</style>
 
-<svg class="a2Clock" viewBox="0 0 100 100">
+<svg class="a2Clock" [attr.clocktype]="clockType" chris="dark" viewBox="0 0 100 100">
     <circle class="face" cx="50" cy="50" r="45"/>
-    <g>
+    <g class="hands">
         <rect class="hour hand" x="47" y="22.5" width="5" height="30" rx="2.5" ry="2.55" [attr.transform]="getHour()" />
         <rect class="minute hand" x="48" y="12.5" width="3" height="40" rx="2" ry="2" [attr.transform]="getMinute()" />
         <line class="second hand" x1="49.5" y1="52" x2="49.5" y2="16" [attr.transform]="getSeond()" />

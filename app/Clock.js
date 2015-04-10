@@ -8,9 +8,10 @@ import {Component, Template, bootstrap} from 'angular2/angular2';
 })
 class Clock {
     time: Date = new Date(2015, 3, 8, 12, 0, 0, 0, 0);
+    clockType: string = 'default';
 
     constructor() {
-        // this.incrementSeconds();
+        this.incrementSeconds();
     }
     incrementSeconds() {
         setTimeout(function() {

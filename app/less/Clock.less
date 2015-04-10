@@ -3,30 +3,60 @@
 svg.a2Clock {
     height: 300px;
     width: 300px;
-    border: 1px solid black;
-    border-radius: 10px;
-    circle.face {
+    .face {
         stroke-width: 2px;
         stroke: #fff; 
     }
-    .hand {
-        stroke-width: 1px;
-        fill: #333;
-        stroke: #555;
-        /*stroke: @hand-color;
-        stroke-linejoin: round;*/
-        &.second {
-            stroke-width: 2px;
-            stroke: #f55;
-        }
-        &.minute, &.hour {
-            stroke-width: 3px;
-        }
-        &.hour {
-            stroke: red;
+    .numbers {
+        .main {
+            font-size: 40px;
         }
     }
-    .hourLabel {
-        font-size: 40px;
+    .hands {
+        .hand {
+            stroke-width: 1px;
+            &.second {
+                stroke-width: 2px;
+            }
+            &.minute, &.hour {
+                stroke-width: 3px;
+            }
+        }
+    }
+    &[clocktype=default] {
+        border: 1px solid black;
+        border-radius: 10px;
+        .face {
+            // fill: red;
+        }
+        .numbers {
+            stroke: #fff;
+        }
+        .hands {
+            .hand {
+                fill: #333;
+                stroke: #555;
+                &.second {
+                    stroke: #f55;
+                }
+                &.minute, &.hour {
+                    // stroke-width: 3px;
+                }
+                &.hour {
+                    stroke: red;
+                }
+            }
+        }
+    }
+    &[clocktype=dark] {
+        .face { }
+        .numbers { }
+        .hands {
+            .hand {
+                &.second { }
+                &.minute, &.hour { }
+                &.hour { }
+            }
+        }
     }
 }
